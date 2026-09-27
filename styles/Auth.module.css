@@ -1,0 +1,174 @@
+/* ============================================
+   AUTHENTICATION PAGES (Login / Register)
+   ============================================ */
+
+/* Page Container */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  background: var(--bg-deep);
+}
+
+/* ============================================
+   AUTH CARD
+   ============================================ */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 44px 40px;
+  width: 100%;
+  max-width: 460px;
+}
+
+.cardWide {
+  max-width: 760px;
+}
+
+/* Logo */
+.logo {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--text-primary);
+  font-style: italic;
+}
+
+/* Headings */
+.heading {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.sub {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+/* ============================================
+   DEMO CREDENTIALS BOX
+   ============================================ */
+.demoBox {
+  background: rgba(201, 168, 76, 0.07);
+  border: 1px dashed var(--gold-dim);
+  border-radius: 3px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+}
+
+.demoTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.demoRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: 3px 0;
+  font-family: monospace;
+}
+
+/* ============================================
+   ERROR MESSAGE
+   ============================================ */
+.errBox {
+  padding: 12px 16px;
+  background: rgba(192, 33, 58, 0.1);
+  border: 1px solid rgba(192, 33, 58, 0.3);
+  border-radius: 2px;
+  font-size: 13px;
+  color: #E05070;
+  margin-bottom: 12px;
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+.eyeBtn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-muted);
+  padding: 4px;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+
+/* ============================================
+   DIVIDER
+   ============================================ */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ============================================
+   SWITCH LINK (Login <-> Register)
+   ============================================ */
+.switchTxt {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.switchLink {
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 600px) {
+  .card {
+    padding: 32px 20px;
+  }
+  
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+}

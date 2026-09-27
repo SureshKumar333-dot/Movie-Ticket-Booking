@@ -1,0 +1,85 @@
+{
+  "movies": [
+    { "id": "M01", "title": "Leader",                    "language": "Tamil",   "genre": "Political,Drama",  "duration": "2h 30m", "rating": "7.9", "badge": "new",  "description": "A young leader rises against corruption and fights to bring justice and change to society through bold political moves.",                                                                                                                                                "cast": "Aadhi, Nassar, Ramya Krishnan ...",        "director": "K. Selva",          "poster": "./leader.webp",      "price": { "standard": 180, "premium": 280 } },
+    { "id": "M02", "title": "Dhurandhar: The Revenge",   "language": "Tamil",   "genre": "Action,Thriller",  "duration": "3h 10m", "rating": "8.3", "badge": "hot",  "description": "Dhurandhar The Revenge introduces Jaskirat Singh Rangi, tracing the chain of events that compel him to become Hamza Ali Mazari, and follows his rise as he operates deep inside Pakistan.", "cast": "Ranveer Singh, Sanjay Dutt, Madhavan ...", "director": "Lokesh Kanagaraj",  "poster": "./dhurandhar.webp",  "price": { "standard": 170, "premium": 260 } },
+    { "id": "M03", "title": "Happyraj",                  "language": "Tamil",   "genre": "Comedy,Drama",     "duration": "2h 20m", "rating": "7.2", "badge": "",     "description": "Happy Raj is a Tamil movie starring G.V. Prakash Kumar, Abbas, Sri Gouri Priya and George Maryan in prominent roles.",                                                                                                                                                          "cast": "G.V Prakash, Sri Gouri Priya, Abbas ...",  "director": "Maria Raj",         "poster": "./happyraj.webp",    "price": { "standard": 200, "premium": 320 } },
+    { "id": "M04", "title": "Kaalidas 2",                "language": "Tamil",   "genre": "Crime,Thriller",   "duration": "2h 45m", "rating": "8.1", "badge": "hot",  "description": "Kaalidas returns in a gripping sequel with higher stakes, deadlier enemies and an explosive climax that will leave audiences speechless.",                                                                                                                                      "cast": "Prashanth, Simran, Sriman ...",            "director": "A. Venkatesh",      "poster": "./kaalidas.webp",    "price": { "standard": 190, "premium": 300 } },
+    { "id": "M05", "title": "Youth",             "language": "Tamil",   "genre": "Action,Comedy",    "duration": "2h 35m", "rating": "7.8", "badge": "new",  "description": "Three contrasting personalities are thrown together in a chaotic adventure that tests their limits and changes their lives forever.",                                                                                                                                            "cast": "Ajith Kumar, Prashanth, Trisha ...",       "director": "Adhik Ravichandran", "poster": "./youth.webp",       "price": { "standard": 210, "premium": 330 } },
+    { "id": "M06", "title": "Satan",                     "language": "Tamil",   "genre": "Horror,Thriller",  "duration": "2h 10m", "rating": "7.5", "badge": "",     "description": "A small town is gripped by terror as supernatural events unfold and one family must confront an ancient evil threatening their existence.",                                                                                                                                          "cast": "Vikram Prabhu, Amala Paul ...",            "director": "S. Ramalingam",     "poster": "./satan.webp",       "price": { "standard": 160, "premium": 250 } },
+    { "id": "M07", "title": "Project Hail Mary",         "language": "English", "genre": "Sci-Fi,Adventure", "duration": "2h 50m", "rating": "8.7", "badge": "hot",  "description": "A lone astronaut wakes up millions of miles from Earth with no memory and must save our planet from an extinction-level threat.",                                                                                                                                                   "cast": "Ryan Gosling, Zoe Saldana ...",            "director": "Phil Lord",         "poster": "./projecthail.webp", "price": { "standard": 250, "premium": 400 } },
+    { "id": "M08", "title": "Vaazha 2",                  "language": "Tamil",   "genre": "Drama,Romance",    "duration": "2h 15m", "rating": "7.4", "badge": "new",  "description": "The sequel to the beloved drama returns with deeper emotions, stronger performances and a story that celebrates the resilience of life.",                                                                                                                                                 "cast": "Bigg Boss Tamil contestants ...",          "director": "Bigg Boss Tamil",   "poster": "./vaazha2.webp",     "price": { "standard": 175, "premium": 275 } },
+    { "id": "M09", "title": "Biker",                "language": "Tamil",   "genre": "Action,Drama",     "duration": "2h 25m", "rating": "7.0", "badge": "",     "description": "A passionate biker chases his dreams on the racing circuit, battling rivals and personal demons to claim the championship and prove himself.",                                                                                                                                            "cast": "Silambarasan TR, Nayanthara ...",          "director": "T. Rajkumar",       "poster": "./biker.webp",       "price": { "standard": 185, "premium": 290 } },
+    { "id": "M10", "title": "Thaai Kizhavi",                     "language": "Tamil",   "genre": "Drama,Family",     "duration": "2h 30m", "rating": "8.0", "badge": "new",  "description": "A heart-warming tale of a mother's unconditional love and sacrifice that spans decades and transcends every boundary known to mankind.",                                                                                                                                              "cast": "Revathi, Jyotika, Nithya Menen ...",      "director": "Bala",              "poster": "./thaai.webp",       "price": { "standard": 180, "premium": 280 } }
+  ],
+  "customers": [
+    { "id": "C001", "name": "Arjun Kumar",   "email": "arjun@gmail.com",   "password": "arjun123",   "phone": "9876543210", "city": "CBE", "address": "12, RS Puram, Coimbatore",   "dob": "1998-05-14", "gender": "Male",   "avatar": "AK", "joinedOn": "2024-01-10", "bookings": ["B001","B002","B003"] },
+    { "id": "C002", "name": "Priya Lakshmi", "email": "priya@gmail.com",   "password": "priya123",   "phone": "9123456789", "city": "CHN", "address": "45, Anna Nagar, Chennai",    "dob": "2000-08-22", "gender": "Female", "avatar": "PL", "joinedOn": "2024-03-15", "bookings": ["B004","B005"] },
+    { "id": "C003", "name": "Karthik Raj",   "email": "karthik@gmail.com", "password": "karthik123", "phone": "9345678901", "city": "CBE", "address": "78, Gandhipuram, Coimbatore", "dob": "1995-11-30", "gender": "Male",   "avatar": "KR", "joinedOn": "2024-06-01", "bookings": ["B006"] }
+  ],
+  "theatres": [
+    { "id": "T01", "name": "PVR Cinemas",           "city": "CBE", "location": "Brookefields Mall, Neelikonampalayam", "phone": "0422-4567890", "halls": ["H01","H02","H03"] },
+    { "id": "T02", "name": "INOX",                  "city": "CBE", "location": "Fun Republic Mall, Avinashi Road",     "phone": "0422-3456789", "halls": ["H04","H05"] },
+    { "id": "T03", "name": "KG Cinemas",            "city": "CBE", "location": "DB Road, R.S. Puram",                 "phone": "0422-2345678", "halls": ["H06","H07"] },
+    { "id": "T04", "name": "Cinepolis",             "city": "CBE", "location": "Prozone Mall, Avinashi Road",          "phone": "0422-1234567", "halls": ["H08"] },
+    { "id": "T05", "name": "SPI Sathyam",           "city": "CHN", "location": "Royapettah High Road",                "phone": "044-4567890",  "halls": ["H09","H10"] },
+    { "id": "T06", "name": "PVR Phoenix",           "city": "CHN", "location": "Phoenix Mall, Velachery",             "phone": "044-3456789",  "halls": ["H11","H12"] }
+  ],
+  "halls": [
+    { "id": "H01", "name": "IMAX Hall",  "theatreId": "T01", "totalSeats": 120, "features": ["IMAX","Dolby Atmos"], "rows": ["A","B","C","D","E","F","G","H"], "seatsPerRow": 15 },
+    { "id": "H02", "name": "4DX Hall",   "theatreId": "T01", "totalSeats": 80,  "features": ["4DX","Vibration"],    "rows": ["A","B","C","D","E"],             "seatsPerRow": 16 },
+    { "id": "H03", "name": "Gold Class", "theatreId": "T01", "totalSeats": 40,  "features": ["Recliner","Premium"], "rows": ["A","B","C","D"],                 "seatsPerRow": 10 },
+    { "id": "H04", "name": "Screen 1",   "theatreId": "T02", "totalSeats": 100, "features": ["4K","Dolby"],          "rows": ["A","B","C","D","E","F"],         "seatsPerRow": 17 },
+    { "id": "H05", "name": "Screen 2",   "theatreId": "T02", "totalSeats": 80,  "features": ["3D"],                  "rows": ["A","B","C","D","E"],             "seatsPerRow": 16 },
+    { "id": "H06", "name": "Hall 1",     "theatreId": "T03", "totalSeats": 90,  "features": ["Dolby"],               "rows": ["A","B","C","D","E","F"],         "seatsPerRow": 15 },
+    { "id": "H07", "name": "Hall 2",     "theatreId": "T03", "totalSeats": 70,  "features": ["3D"],                  "rows": ["A","B","C","D","E"],             "seatsPerRow": 14 },
+    { "id": "H08", "name": "Screen 1",   "theatreId": "T04", "totalSeats": 110, "features": ["VIP","3D"],             "rows": ["A","B","C","D","E","F","G"],     "seatsPerRow": 16 },
+    { "id": "H09", "name": "IMAX Hall",  "theatreId": "T05", "totalSeats": 150, "features": ["IMAX","Premium"],      "rows": ["A","B","C","D","E","F","G","H","I","J"], "seatsPerRow": 15 },
+    { "id": "H10", "name": "Screen 2",   "theatreId": "T05", "totalSeats": 100, "features": ["4K","Dolby Atmos"],    "rows": ["A","B","C","D","E","F"],         "seatsPerRow": 17 }
+  ],
+  "shows": [
+    { "id": "S001", "movieId": "M01", "theatreId": "T01", "hallId": "H01", "cityId": "CBE", "showDate": "2026-04-05", "showTime": "10:00 AM", "availableSeats": 113, "language": "Tamil", "format": "IMAX" },
+    { "id": "S002", "movieId": "M01", "theatreId": "T01", "hallId": "H01", "cityId": "CBE", "showDate": "2026-04-05", "showTime": "01:30 PM", "availableSeats": 120, "language": "Tamil", "format": "IMAX" },
+    { "id": "S003", "movieId": "M02", "theatreId": "T01", "hallId": "H02", "cityId": "CBE", "showDate": "2026-04-05", "showTime": "11:00 AM", "availableSeats": 78, "language": "Tamil", "format": "4DX" },
+    { "id": "S004", "movieId": "M03", "theatreId": "T03", "hallId": "H06", "cityId": "CBE", "showDate": "2026-04-05", "showTime": "10:00 AM", "availableSeats": 87, "language": "Tamil", "format": "Standard" },
+    { "id": "S005", "movieId": "M07", "theatreId": "T05", "hallId": "H09", "cityId": "CHN", "showDate": "2026-04-05", "showTime": "10:00 AM", "availableSeats": 148, "language": "English", "format": "IMAX" }
+  ],
+  "bookings": [
+    { "id": "B001", "customerId": "C001", "showId": "S001", "movieId": "M01", "theatreId": "T01", "hallId": "H01", "movieTitle": "Leader",                   "theatreName": "PVR Cinemas", "hallName": "IMAX Hall",  "cityId": "CBE", "showDate": "2026-04-05", "showTime": "10:00 AM", "seats": ["C6","C7"],      "seatType": "Standard", "ticketAmount": 360, "convenienceFee": 60, "totalAmount": 420, "paymentMethod": "UPI",         "paymentStatus": "SUCCESS", "status": "CONFIRMED", "bookedOn": "2026-03-20T10:30:00", "updatedAt": null },
+    { "id": "B002", "customerId": "C001", "showId": "S003", "movieId": "M02", "theatreId": "T01", "hallId": "H02", "movieTitle": "Dhurandhar: The Revenge", "theatreName": "PVR Cinemas", "hallName": "4DX Hall",   "cityId": "CBE", "showDate": "2026-04-05", "showTime": "11:00 AM", "seats": ["A3","A4"],      "seatType": "Premium",   "ticketAmount": 520, "convenienceFee": 60, "totalAmount": 580, "paymentMethod": "Credit Card", "paymentStatus": "SUCCESS", "status": "CANCELLED", "bookedOn": "2026-03-18T14:15:00", "updatedAt": null },
+    { "id": "B003", "customerId": "C001", "showId": "S004", "movieId": "M03", "theatreId": "T03", "hallId": "H06", "movieTitle": "Happyraj",                "theatreName": "KG Cinemas",  "hallName": "Hall 1",     "cityId": "CBE", "showDate": "2026-04-05", "showTime": "10:00 AM", "seats": ["D4","D5","D6"], "seatType": "Standard", "ticketAmount": 600, "convenienceFee": 90, "totalAmount": 690, "paymentMethod": "Debit Card", "paymentStatus": "SUCCESS", "status": "CONFIRMED", "bookedOn": "2026-03-22T09:00:00", "updatedAt": null },
+    { "id": "B004", "customerId": "C002", "showId": "S005", "movieId": "M02", "theatreId": "T05", "hallId": "H09", "movieTitle": "Dhurandhar: The Revenge", "theatreName": "SPI Sathyam", "hallName": "IMAX Hall",  "cityId": "CHN", "showDate": "2026-04-05", "showTime": "10:00 AM", "seats": ["E1","E2"],      "seatType": "Standard", "ticketAmount": 340, "convenienceFee": 60, "totalAmount": 400, "paymentMethod": "UPI",         "paymentStatus": "SUCCESS", "status": "CONFIRMED", "bookedOn": "2026-03-25T11:00:00", "updatedAt": null },
+    { "id": "B005", "customerId": "C002", "showId": "S005", "movieId": "M05", "theatreId": "T03", "hallId": "H07", "movieTitle": "Youth",                   "theatreName": "KG Cinemas",  "hallName": "Hall 2",     "cityId": "CBE", "showDate": "2026-03-30", "showTime": "10:00 AM", "seats": ["B3","B4","B5"], "seatType": "Standard", "ticketAmount": 540, "convenienceFee": 90, "totalAmount": 630, "paymentMethod": "Net Banking", "paymentStatus": "SUCCESS", "status": "CONFIRMED", "bookedOn": "2026-03-24T16:30:00", "updatedAt": null },
+    { "id": "B006", "customerId": "C003", "showId": "S004", "movieId": "M04", "theatreId": "T04", "hallId": "H08", "movieTitle": "Kaalidas 2",              "theatreName": "Cinepolis",   "hallName": "Screen 1",   "cityId": "CBE", "showDate": "2026-04-05", "showTime": "10:30 AM", "seats": ["C1","C2"],      "seatType": "Standard", "ticketAmount": 320, "convenienceFee": 60, "totalAmount": 380, "paymentMethod": "Cash",        "paymentStatus": "PENDING",  "status": "CONFIRMED", "bookedOn": "2026-03-26T08:00:00", "updatedAt": null }
+  ],
+  "cancellations": [
+    {
+      "id": "CAN001",
+      "bookingId": "B002",
+      "customerId": "C001",
+      "movieTitle": "Amaran",
+      "theatreName": "PVR Cinemas",
+      "showDate": "2026-04-05",
+      "showTime": "11:00 AM",
+      "seats": ["A3", "A4"],
+      "totalAmount": 580,
+      "refundAmount": 522,
+      "refundStatus": "PROCESSED",
+      "refundMethod": "Credit Card",
+      "reason": "Personal reasons",
+      "cancelledAt": "2026-03-19T10:00:00"
+    }
+  ],
+  "changes": [
+    {
+      "id": "CHG001",
+      "bookingId": "B001",
+      "customerId": "C001",
+      "changeType": "SEAT_CHANGE",
+      "description": "Seat change from C4,C5 to C6,C7",
+      "before": { "seats": ["C4","C5"], "showDate": "2026-04-05", "showTime": "10:00 AM" },
+      "after":  { "seats": ["C6","C7"], "showDate": "2026-04-05", "showTime": "10:00 AM" },
+      "feePaid": 50,
+      "changedAt": "2026-03-21T08:00:00"
+    }
+  ]
+}

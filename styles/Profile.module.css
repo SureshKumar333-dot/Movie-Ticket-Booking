@@ -1,0 +1,322 @@
+/* ============================================
+   PROFILE PAGE
+   ============================================ */
+
+/* Page Container */
+.page {
+  min-height: 100vh;
+  padding-top: 80px;
+  background: var(--bg-deep);
+}
+
+/* ============================================
+   HEADER SECTION
+   ============================================ */
+.header {
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.1), rgba(139, 26, 45, 0.08));
+  border-bottom: 1px solid var(--border);
+  padding: 40px 48px;
+}
+
+.headerInner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.2);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.userName {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+
+.userEmail {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.userMeta {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   TABS
+   ============================================ */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  padding: 0 48px;
+  background: var(--bg-card);
+}
+
+.tab {
+  padding: 16px 24px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.3s;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font-family: var(--font-body);
+}
+
+.tab:hover {
+  color: var(--text-primary);
+}
+
+.tabActive {
+  color: var(--gold) !important;
+  border-bottom-color: var(--gold) !important;
+}
+
+/* ============================================
+   MAIN BODY
+   ============================================ */
+.body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 48px;
+}
+
+/* ============================================
+   PROFILE CARD
+   ============================================ */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 32px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 300;
+}
+
+/* Details Grid */
+.detailGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.detailItem {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+.detailItem:nth-child(2n) {
+  border-right: none;
+}
+
+.detailItem:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+.detailLabel {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
+.detailVal {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Form Grid */
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+
+/* ============================================
+   BOOKINGS SECTION
+   ============================================ */
+.bookingsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.loadingTxt {
+  color: var(--text-muted);
+  font-size: 14px;
+  padding: 32px 0;
+}
+
+.bookingsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Booking Card */
+.bookingCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: space-between;
+  transition: border-color 0.3s;
+}
+
+.bookingCard:hover {
+  border-color: var(--gold-dim);
+}
+
+.cancelledCard {
+  opacity: 0.6;
+}
+
+.bookingInfo {
+  flex: 1;
+}
+
+.bookingMovie {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.bookingMeta {
+  display: flex;
+  gap: 14px;
+  font-size: 12px;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.bookingSeats {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.bookingPay {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.bookingId {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+.bookingRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.statusBadge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.confirmed {
+  background: rgba(76, 175, 80, 0.12);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  color: #4CAF50;
+}
+
+.cancelledBadge {
+  background: rgba(192, 33, 58, 0.1);
+  border: 1px solid rgba(192, 33, 58, 0.3);
+  color: #E05070;
+}
+
+.noBookings {
+  text-align: center;
+  padding: 60px 24px;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 700px) {
+  .body {
+    padding: 24px;
+  }
+  
+  .tabs {
+    padding: 0 20px;
+  }
+  
+  .header {
+    padding: 24px;
+  }
+  
+  .detailGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .detailItem {
+    border-right: none;
+  }
+  
+  .detailItem:last-child {
+    border-bottom: none;
+  }
+  
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bookingCard {
+    flex-wrap: wrap;
+  }
+}

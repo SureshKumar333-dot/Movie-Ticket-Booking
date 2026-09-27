@@ -1,0 +1,20 @@
+{
+  "cancellations": [
+    {
+      "id": "CAN001",
+      "bookingId": "B002",
+      "customerId": "C001",
+      "movieTitle": "Amaran",
+      "theatreName": "PVR Cinemas",
+      "showDate": "2026-04-05",
+      "showTime": "11:00 AM",
+      "seats": ["A3", "A4"],
+      "totalAmount": 580,
+      "refundAmount": 522,
+      "refundStatus": "PROCESSED",
+      "refundMethod": "Credit Card",
+      "reason": "Personal reasons",
+      "cancelledAt": "2026-03-19T10:00:00"
+    }
+  ]
+}

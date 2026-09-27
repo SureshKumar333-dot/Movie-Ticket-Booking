@@ -1,0 +1,663 @@
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 65% 50%, rgba(139, 26, 45, 0.18) 0%, transparent 70%),
+              radial-gradient(ellipse 40% 40% at 85% 20%, rgba(201, 168, 76, 0.08) 0%, transparent 60%),
+              linear-gradient(135deg, #050508 0%, #08080F 50%, #0C0810 100%);
+}
+
+/* ============================================
+   FILM STRIP COMPONENT
+   ============================================ */
+.stripWrapper {
+  position: absolute;
+  right: 0;
+  top: -10%;
+  bottom: -10%;
+  width: 400px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.strip {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  will-change: transform;
+}
+
+.frame {
+  display: flex;
+  align-items: stretch;
+  height: 215px;
+  flex-shrink: 0;
+  background: #080810;
+  border-top: 2px solid rgba(201, 168, 76, 0.1);
+  border-bottom: 2px solid rgba(201, 168, 76, 0.1);
+  overflow: hidden;
+}
+
+.frame:hover .frameImg {
+  transform: scale(1.06);
+  filter: brightness(0.85) saturate(1.2);
+}
+
+.sprockets {
+  width: 26px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px 0;
+  background: #050508;
+  z-index: 2;
+}
+
+.hole {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: #000;
+  border: 1.5px solid rgba(201, 168, 76, 0.18);
+}
+
+.frameInner {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.frameImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+  filter: brightness(0.7) saturate(0.85);
+}
+
+.frameOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(5, 5, 8, 0.05) 0%, rgba(5, 5, 8, 0) 40%, rgba(5, 5, 8, 0.6) 100%);
+  pointer-events: none;
+}
+
+/* Film Strip Fades */
+.fadeTop,
+.fadeBottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 160px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.fadeTop {
+  top: 0;
+  background: linear-gradient(to bottom, #050508, transparent);
+}
+
+.fadeBottom {
+  bottom: 0;
+  background: linear-gradient(to top, #050508, transparent);
+}
+
+.fadeLeft {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  background: linear-gradient(to right, #050508, transparent);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ============================================
+   HERO CONTENT
+   ============================================ */
+.heroContent {
+  position: relative;
+  z-index: 2;
+  padding: 0 80px;
+  max-width: 680px;
+  animation: fadeInUp 1s ease both;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.eyebrowLine {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.eyebrow span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 6.5vw, 84px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.heroDesc {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 460px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.heroStats {
+  display: flex;
+  gap: 40px;
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statNum {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--gold);
+}
+
+.statLabel {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   GENRE TABS & MOVIES GRID
+   ============================================ */
+.seeAll {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: letter-spacing 0.3s;
+}
+
+.seeAll:hover {
+  letter-spacing: 3px;
+}
+
+.genreTabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 36px;
+  overflow-x: auto;
+}
+
+.genreTab {
+  padding: 12px 22px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.3s;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font-family: var(--font-body);
+  white-space: nowrap;
+}
+
+.genreTab:hover {
+  color: var(--text-primary);
+}
+
+.genreActive {
+  color: var(--gold) !important;
+  border-bottom-color: var(--gold) !important;
+}
+
+.moviesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.loading {
+  color: var(--text-muted);
+  font-size: 14px;
+  padding: 40px;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+.movieCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.movieCard:hover {
+  border-color: var(--gold-dim);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.posterWrap {
+  aspect-ratio: 2 / 3;
+  position: relative;
+  overflow: hidden;
+}
+
+.posterImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.movieCard:hover .posterImg {
+  transform: scale(1.05);
+}
+
+.posterWrap .badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 5, 8, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.movieCard:hover .cardOverlay {
+  opacity: 1;
+}
+
+.bookBtn {
+  padding: 10px 22px;
+  background: var(--gold);
+  border: none;
+  border-radius: 2px;
+  color: var(--bg-deep);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cardInfo {
+  padding: 12px;
+}
+
+.cardTitle {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardMeta {
+  display: flex;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.cardTags {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.tag {
+  padding: 2px 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.cardPrice {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.cardCast {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================
+   CINEMAS SECTION
+   ============================================ */
+.cinemasSection {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cityTabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.cityTab {
+  padding: 7px 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cityTab:hover,
+.cityActive {
+  background: rgba(201, 168, 76, 0.12);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.theatresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.theatreCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 20px;
+  transition: all 0.3s;
+}
+
+.theatreCard:hover {
+  border-color: var(--gold-dim);
+  transform: translateY(-3px);
+}
+
+.theatreIcon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.theatreName {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.theatreLoc {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.theatreHalls {
+  font-size: 11px;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* ============================================
+   OFFERS GRID
+   ============================================ */
+.offersGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 18px;
+}
+
+.offerCard {
+  border-radius: 3px;
+  padding: 28px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.offerCard:hover {
+  transform: translateY(-4px);
+}
+
+.featured {
+  background: linear-gradient(135deg, rgba(139, 26, 45, 0.6), rgba(50, 5, 10, 0.9));
+  border: 1px solid rgba(192, 33, 58, 0.3);
+}
+
+.gold {
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.2), rgba(30, 20, 5, 0.9));
+  border: 1px solid var(--border);
+}
+
+.dark {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.offerLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.offerHeadline {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.offerDesc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.offerCode {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 5px 12px;
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px dashed var(--gold-dim);
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--gold);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 48px;
+  background: var(--bg-card);
+}
+
+.footerInner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto 40px;
+}
+
+.footerLogo {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.footerDesc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 260px;
+}
+
+.footerColTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.footerLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footerLinks a {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footerLinks a:hover {
+  color: var(--gold);
+}
+
+.footerBottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1100px) {
+  .stripWrapper {
+    width: 320px;
+  }
+}
+
+@media (max-width: 900px) {
+  .heroContent {
+    padding: 0 24px;
+  }
+  
+  .stripWrapper {
+    display: none;
+  }
+  
+  .offersGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footerInner {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  .footer {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerInner {
+    grid-template-columns: 1fr;
+  }
+}

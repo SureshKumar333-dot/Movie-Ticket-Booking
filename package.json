@@ -1,0 +1,24 @@
+{
+  "name": "cineverse",
+  "version": "1.0.0",
+  "description": "Online Movie Ticket Booking — Next.js 14 Pages Router + Spring Boot & MySQL Backend",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "backend": "java -jar cineverse-backend/target/cineverse-backend-1.0.0.jar",
+    "backend:build": "mvn package -DskipTests -f cineverse-backend/pom.xml",
+    "dev:all": "concurrently -n \"next,spring\" -c \"cyan,green\" \"npm run dev\" \"npm run backend\""
+  },
+  "dependencies": {
+    "next": "14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0"
+  }
+}

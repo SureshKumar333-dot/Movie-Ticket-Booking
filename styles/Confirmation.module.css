@@ -1,0 +1,338 @@
+/* ============================================
+   BOOKING CONFIRMATION PAGE
+   ============================================ */
+
+/* Page Container */
+.page {
+  min-height: 100vh;
+  padding-top: 80px;
+  background: var(--bg-deep);
+}
+
+/* ============================================
+   BANNER SECTION
+   ============================================ */
+.banner {
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.12), rgba(139, 26, 45, 0.12));
+  border-bottom: 1px solid var(--border);
+  padding: 48px;
+  text-align: center;
+}
+
+.bannerIcon {
+  font-size: 56px;
+  margin-bottom: 16px;
+}
+
+.bannerTitle {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 300;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.bannerSub {
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+.content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ============================================
+   TICKET CARD
+   ============================================ */
+.ticket {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Ticket Header */
+.ticketTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  background: rgba(201, 168, 76, 0.06);
+  border-bottom: 1px solid var(--border);
+}
+
+.ticketLogo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.ticketStatus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #4CAF50;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4CAF50;
+  box-shadow: 0 0 6px #4CAF50;
+}
+
+/* Movie Row */
+.movieRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 22px 28px;
+  gap: 16px;
+}
+
+.movieTitle {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 6px;
+}
+
+.movieMeta {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.bookingId {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold);
+  font-family: monospace;
+  background: rgba(201, 168, 76, 0.1);
+  padding: 6px 12px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+/* Tear Line (Dashed Separator) */
+.tearLine {
+  display: flex;
+  align-items: center;
+}
+
+.cL {
+  width: 20px;
+  height: 20px;
+  border-radius: 0 20px 20px 0;
+  background: var(--bg-deep);
+  border: 1px solid var(--border);
+  border-left: none;
+  flex-shrink: 0;
+}
+
+.cR {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px 0 0 20px;
+  background: var(--bg-deep);
+  border: 1px solid var(--border);
+  border-right: none;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.dots {
+  flex: 1;
+  border-top: 2px dashed var(--border);
+}
+
+/* Details Grid */
+.detailGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  padding: 16px 28px;
+}
+
+.detailItem {
+  padding: 12px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.detailItem:nth-child(3n) {
+  border-right: none;
+}
+
+.detailItem:nth-last-child(-n+3) {
+  border-bottom: none;
+}
+
+.detailLabel {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
+.detailVal {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.goldVal {
+  color: var(--gold) !important;
+  font-size: 16px !important;
+}
+
+/* Guest Information */
+.guestRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 28px;
+}
+
+.guestAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.2);
+  border: 1px solid var(--gold-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.guestName {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.guestEmail {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.payBadge {
+  margin-left: auto;
+  padding: 5px 12px;
+  background: rgba(76, 175, 80, 0.12);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #4CAF50;
+}
+
+/* ============================================
+   JSON DATA DISPLAY
+   ============================================ */
+.jsonBox {
+  background: #0A0A10;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.jsonHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #111118;
+  border-bottom: 1px solid var(--border);
+}
+
+.jsonTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+}
+
+.jsonDots {
+  display: flex;
+  gap: 6px;
+}
+
+.jsonDots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+}
+
+.jsonPre {
+  padding: 20px;
+  font-size: 11px;
+  line-height: 1.7;
+  color: #A8C488;
+  font-family: 'Courier New', monospace;
+  overflow-x: auto;
+  white-space: pre;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+/* ============================================
+   ACTION BUTTONS
+   ============================================ */
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.actions > * {
+  flex: 1;
+  justify-content: center;
+}
+
+/* ============================================
+   FOOTER TEXT
+   ============================================ */
+.bookedAt {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 600px) {
+  .detailGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .bannerTitle {
+    font-size: 28px;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+}

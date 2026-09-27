@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Next.js build output
+.next/
+out/
+build/
+dist/
+
+# Environment files
+.env*.local
+.env
+
+# Java / Maven build output
+cineverse-backend/target/
+*.class
+*.jar
+*.war
+
+# IDE & Editor
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Windows startup temp & logs
+*.log
